@@ -3,7 +3,7 @@
 
 # flikrTweetr.py a tool to update a twitter status on flickr photoset
 # updates
-# Copyright (C) 2010 Dirk Husemann.
+# Copyright (C) 2010 Dirk Husemann <dr_who@xyzzyxyzzy.net>
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
