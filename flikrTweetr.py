@@ -88,7 +88,7 @@ if __name__ == "__main__":
     flikr.get_token_part_two((token, frob))
 
     # --- authenticate with twitter
-    tweetr = twitter.Api(username = cfg.get('twitter', 'consumerKey'), password = cfg.get('twitter', 'consumerSecret'),
+    tweetr = twitter.Api(consumer_key = cfg.get('twitter', 'consumerKey'), consumer_secret = cfg.get('twitter', 'consumerSecret'),
                          access_token_key = cfg.get('twitter', 'accessTokenKey'),
                          access_token_secret = cfg.get('twitter', 'accessTokenSecret'))
 
@@ -99,7 +99,9 @@ if __name__ == "__main__":
         id = p.attrib["id"]
         if not id in memory: 
             if not options.dryRun:
-                memory[id] = p.attrib["title"]
+                title = p.attrib["title"]
+                print 'title: %s' % (title)
+                memory[id] = str(title.lower.replace(u'ö', 'oe').replace(u'ü', 'ue').replace(u'ä', 'ae').replace(u'ß', 'ss'))
 
             tweetrUpdate(options.message, p.attrib["title"], flickrapi.shorturl.url(id), options.dryRun or options.catchUp)
 
