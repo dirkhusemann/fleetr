@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name = 'flikrTweetr',
-      version = '1.0.0',
+      version = '1.0.2',
       description = 'update twitter status for new flickr photo',
       author = 'dirk husemann',
       author_email = 'dr_who@xyzzyxyzzy.net',

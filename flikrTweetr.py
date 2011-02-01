@@ -100,8 +100,7 @@ if __name__ == "__main__":
         if not id in memory: 
             if not options.dryRun:
                 title = p.attrib["title"]
-                print 'title: %s' % (title)
-                memory[id] = str(title.lower.replace(u'ö', 'oe').replace(u'ü', 'ue').replace(u'ä', 'ae').replace(u'ß', 'ss'))
+                memory[id] = str(title.lower().replace(u'ö', 'oe').replace(u'ü', 'ue').replace(u'ä', 'ae').replace(u'ß', 'ss'))
 
             tweetrUpdate(options.message, p.attrib["title"], flickrapi.shorturl.url(id), options.dryRun or options.catchUp)
 
