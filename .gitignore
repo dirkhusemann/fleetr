@@ -1,2 +1,4 @@
 *~
-build/*
+project/boot/scala-*
+project/build/target/
+lib_managed/
