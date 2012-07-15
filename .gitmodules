@@ -1,0 +1,3 @@
+[submodule "flickr"]
+	path = flickr
+	url = git://github.com/alexis-mignon/python-flickr-api.git
